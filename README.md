@@ -46,3 +46,29 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+
+## Runtime Analysis, Maxie M. 
+### Time Complexity:
+- **subsets:** there are $2^n$ subsets for $n$ cities
+- **cities in Each Subset**: iterates over $n$ possible cities for each subset
+- **recursive call:** makes recursive call to calculate the cost of remaining cities for each city in a subset
+- **Total number of operations:** $n \times 2^n$
+- **Worst-Case Time Complexity:** $O(n \times 2^n)$
+### Memory Complexity: 
+- **Memoization Table:**
+  - table has $n$ rows
+  - each row has $2^n$ entries
+  - **Total Size:** $O(n \times 2^n)$
+- **Call Stack:**
+  - recursive calls cango as deep as $n$
+    - this in turn adds an additional $O(n)$ space for the stack
+- **Total Memory Usage:** dominated by the memoization table
+- **Worst-Case Memory Complexity:** $O(n \times 2^n)$
+### Conclusion: 
+- **Worst-Case Time Complexity:** $O(n \times 2^n)$
+- **Worst-Case Memory Complexity:** $O(n \times 2^n)$
+## Plagiarism Statement: 
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+## Resources:
+- https://compgeek.co.in/held-karp-algorithm-for-tsp/
